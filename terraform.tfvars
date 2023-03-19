@@ -1,0 +1,16 @@
+deployment_config_name = "terraform-example"
+deployment_config_labels_test = "MyExampleApp"
+deployment_config_spec_replicas = 3
+deployment_config_container_image = "nginx:1.7.8"
+deployment_config_container_image_name = "example"
+deployment_config_container_image_cpu_limit = "0.5"
+deployment_config_container_image_cpu_request = "250m"
+deployment_config_container_image_memory_limit = "512Mi"
+deployment_config_container_image_memory_request = "50Mi"
+deployment_config_container_liveness_probe_http_get_path = "/nginx_status"
+deployment_config_container_liveness_probe_http_get_port = 80
+deployment_config_container_liveness_probe_http_header_name = "X-Custom-Header"
+deployment_config_container_liveness_probe_http_header_value = "Awesome"
+deployment_config_container_liveness_probe_initial_delay_seconds = 3
+deployment_config_container_liveness_probe_initial_period_seconds = 3
+deployment_config_spec_trigger_type = "ConfigChange"
